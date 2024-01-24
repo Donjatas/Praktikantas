@@ -19,7 +19,7 @@ class VartotojasStudentasController extends Controller
         $validatedData = $request->validate([
             'vardas' => 'required|string|max:50',
             'pavarde' => 'required|string|max:50',
-            'el_pastas' => 'required|email|max:100',
+            'el_pastas' => 'required|email|max:100|unique:vartotojas_studentas',
             'slaptazodis' => 'required|string|max:255',
             'telefono_numeris' => 'nullable|string|max:15',
             'aukstoji_mokykla' => 'nullable|string|max:100',

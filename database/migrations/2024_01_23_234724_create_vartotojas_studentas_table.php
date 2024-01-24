@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::connection('mongodb')->create('vartotojas_studentas', function (Blueprint $collection) {
-            $collection->unique('id');
             $collection->string('vardas');
             $collection->string('pavarde');
             $collection->string('el_pastas');
